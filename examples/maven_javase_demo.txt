@@ -1,0 +1,61 @@
+mvn archetype:generate -DgroupId=fi.agileo.mavendemot -DartifactId=hello-maven -DarchetypeArtifactId=maven-archetype-quickstart
+
+Luodaan oletuksena seuraavanlainen projektirakenne
+
+hello-maven/
+├── pom.xml
+└── src
+    ├── main
+    │   └── java
+    │       └── fi
+    │           └── agileo
+    │               └── mavendemot
+    │                   └── App.java
+    └── test
+        └── java
+            └── fi
+                └── agileo
+                    └── mavendemot
+                        └── AppTest.java
+
+sekä pom.xml -tiedosto:
+
+more hello-maven/pom.xml 
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>fi.agileo.mavendemot</groupId>
+  <artifactId>hello-maven</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>hello-maven</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
+
+
+mvn package
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running fi.agileo.mavendemot.AppTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.05 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+
+Ohjelman ajaminen:
+
+java -cp target/hello-maven-1.0-SNAPSHOT.jar fi.agileo.mavendemot.App
+Hello World!
+
