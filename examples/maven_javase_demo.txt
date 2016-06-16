@@ -39,23 +39,3 @@ more hello-maven/pom.xml
     </dependency>
   </dependencies>
 </project>
-
-
-mvn package
-
--------------------------------------------------------
- T E S T S
--------------------------------------------------------
-Running fi.agileo.mavendemot.AppTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.05 sec
-
-Results :
-
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
-
-
-Ohjelman ajaminen:
-
-java -cp target/hello-maven-1.0-SNAPSHOT.jar fi.agileo.mavendemot.App
-Hello World!
-
